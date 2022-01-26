@@ -1,6 +1,7 @@
 const express = require('express');
 var bodyParser = require('body-parser');
 
+
 const route = require('./routes/route.js');
 
 const app = express();
@@ -10,12 +11,13 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
 const mongoose = require('mongoose')
 
 
 
-mongoose.connect("mongodb+srv://monty-python:SnYUEY4giV9rekw@functionup-backend-coho.0zpfv.mongodb.net/group3_Magnificent?authSource=admin&replicaSet=atlas-60843q-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true")
-    .then(() => console.log('mongodb Rock n Roll on 3000'))
+mongoose.connect("mongodb+srv://monty-python:SnYUEY4giV9rekw@functionup-backend-coho.0zpfv.mongodb.net/sonaliturale_db?retryWrites=true&w=majority")
+    .then(() => console.log('mongodb running on port 3000'))
     .catch(err => console.log(err))
    
 

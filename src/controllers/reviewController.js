@@ -5,8 +5,6 @@ const reviewModel = require('../models/reviewModel')
 
 
 //-------------------------------Functions---------------------------------/
-
-
 const isValid = function (value) {
     if (typeof value === 'undefined' || value === null) return false
     if (typeof value === 'string' && value.trim().length === 0) return false
@@ -21,9 +19,7 @@ const isValidRequestBody = function (requestBody) {
 const isValidObjectId = function (objectId) {
     return mongoose.Types.ObjectId.isValid(objectId)
 }
-
 //-----------------------------------------------------------------------------------------//
-
 
 const addReview = async function (req, res) {
     try {

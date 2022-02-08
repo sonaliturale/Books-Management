@@ -17,7 +17,6 @@ const isValidRequestBody = function (requestBody) {
 }
 
 
-
 const createUser = async function (req, res) {
     try {
         const requestBody = req.body;

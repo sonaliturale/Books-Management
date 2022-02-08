@@ -1,9 +1,4 @@
 # Project - Books Management
-## Key points
-Create a group database groupXDatabase. You can clean the db you previously used and resue that.
-This time each group should have a single git branch. Coordinate amongst yourselves by ensuring every next person pulls the code last pushed by a team mate. You branch will be checked as part of the demo. Branch name should follow the naming convention project/booksManagementGroupX
-Follow the naming conventions exactly as instructed.
-
 ## Models
 
 ## User Model
@@ -45,6 +40,8 @@ Follow the naming conventions exactly as instructed.
   review: {string, optional}
   isDeleted: {boolean, default: false},
 }
+
+
 ## User APIs
 
 ## POST /register
@@ -57,6 +54,7 @@ Return HTTP status 400 if no params or invalid params received in request body. 
 Allow an user to login with their email and password.
 On a successful login attempt return a JWT token contatining the userId, exp, iat. The response should be a JSON object like this
 If the credentials are incorrect return a suitable error message with a valid HTTP status code. The response should be a JSON object like this
+
 ## Books API
 
 ## POST /books
@@ -98,6 +96,7 @@ Check if the bookId exists and is not deleted. If it does, mark it deleted and r
 If the book document doesn't exist then return an HTTP status of 404 with a body like this
 
 ## Review APIs
+
 ## POST /books/:bookId/review
 Add a review for the book in reviews collection.
 Check if the bookId exists and is not deleted before adding the review. Send an error response with appropirate status code like this if the book does not exist
@@ -121,13 +120,6 @@ Make sure all the book routes are protected.
 ## Authorisation
 Make sure that only the owner of the books is able to create, edit or delete the book.
 In case of unauthorized access return an appropirate error message.
-
-## Testing
-To test these apis create a new collection in Postman named Project 4 Books Management
-Each api should have a new request in this collection
-Each request in the collection should be rightly named. Eg Create user, Create book, Get books etc
-Each member of each team should have their tests in running state
-Refer below sample A Postman collection and request sample
 
 ## Response
 Successful Response structure

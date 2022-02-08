@@ -21,8 +21,7 @@ const createBook = async (req, res) => {
 
             return res.status(400).send({ status: false, message: "Numbers are not allowed" })
         }
-
-        //......................................................................................................
+       //....................................................................................................
         if (!validator.isValid(excerpt)) {
             return res.status(400).send({ status: false, message: "excerpt must be present, Please provide proper key and value" })
         };
@@ -257,11 +256,8 @@ const deleteBookByID = async (req, res) => {
 }
 
 
-module.exports = {
-    createBook,
-    getAllBooks,
-    getBookDetailsById,
-    updateBook,
-    deleteBookByID
+module.exports = {createBook,getAllBooks,getBookDetailsById,updateBook,deleteBookByID}
 
-}
+
+
+

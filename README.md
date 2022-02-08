@@ -122,22 +122,34 @@ Make sure that only the owner of the books is able to create, edit or delete the
 In case of unauthorized access return an appropirate error message.
 
 ## Response
+
 Successful Response structure
+
 {
+
   status: true,
   message: 'Success',
   data: {
 
   }
+
 }
+
 Error Response structure
+
 {
+
   status: false,
   message: ""
+
 }
+
 Collections
+
 users
+
 {
+
   _id: ObjectId("88abc190ef0288abc190ef02"),
   title: "Mr",
   name: "John Doe",
@@ -151,9 +163,13 @@ users
   },
   "createdAt": "2021-09-17T04:25:07.803Z",
   "updatedAt": "2021-09-17T04:25:07.803Z",
+
 }
+
 books
+
 {
+
   "_id": ObjectId("88abc190ef0288abc190ef55"),
   "title": "How to win friends and influence people",
   "excerpt": "book body",
@@ -167,19 +183,28 @@ books
   "releasedAt": "2021-09-17T04:25:07.803Z"
   "createdAt": "2021-09-17T04:25:07.803Z",
   "updatedAt": "2021-09-17T04:25:07.803Z",
+
 }
+
 reviews
+
 {
+
   "_id": ObjectId("88abc190ef0288abc190ef88"),
   bookId: ObjectId("88abc190ef0288abc190ef55"),
   reviewedBy: "Jane Doe",
   reviewedAt: "2021-09-17T04:25:07.803Z",
   rating: 4,
   review: "An exciting nerving thriller. A gripping tale. A must read book."
+
 }
+
 Response examples
+
 Get books response
+
 {
+
   status: true,
   message: 'Books list',
   data: [
@@ -202,9 +227,13 @@ Get books response
       "releasedAt": "2021-09-17T04:25:07.803Z"
     }
   ]
+
 }
+
 Book details response
+
 {
+
   status: true,
   message: 'Books list',
   data: {
@@ -255,9 +284,13 @@ Book details response
       }, 
     ]
   }
+
 }
+
 Book details response no reviews
+
 {
+
   status: true,
   message: 'Books list',
   data: {
@@ -275,6 +308,7 @@ Book details response no reviews
     "updatedAt": "2021-09-17T04:25:07.803Z",
     "reviewsData": []
   }
+
 }
 
 
